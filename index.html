@@ -482,17 +482,18 @@
             </section>
 
             <section class="page__subscribe subscribe container">
-                <div class="subscribe__container">
+                <div class="subscribe__container" id="signup">
                     <div class="subscribe__header">
                         <h2 class="subscribe__title title title_center">Get Our Newsletter</h2>
                         <div class="subscribe__sub-title">To join the worldwide community</div>
                     </div>
-                    <form action="#" class="subscribe__form form-subscribe">
+                    <form action="" name="newsletter" method="post" class="subscribe__form form-subscribe">
                         <div class="form-subscribe__content">
                             <label for="input-1" class="form-subscribe__label">Type your Email Address</label>
-                            <input autocomplete="off" type="email" name="form[]" placeholder="here..." class="form-subscribe__input">
+                            <input autocomplete="on" type="email" name="Email" placeholder="here..." class="form-subscribe__input email" id="email" required="required">
                         </div>
                         <button type="submit" class="form-subscribe__button">Send now</button>
+                        <span id="msg"></span>
                     </form>
                 </div>
             </section>

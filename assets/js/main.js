@@ -73,3 +73,37 @@ faqHeader.forEach((el) => {
     el.addEventListener('click', togglefaq)
 })
 
+function isValidEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+}
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbymGsr-KQqz0qP5XnEV9CHarqpFlahqP5EiWjQHW_QC6PJVsrS4FziASSwysMujc8rD1A/exec';
+const form = document.forms['newsletter'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const userInput = form.email.value;
+
+    if (!isValidEmail(userInput)) {
+        msg.innerHTML = "Invalid email address.";
+        return;
+    }
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            if (response.ok) {
+                msg.innerHTML = "Message Sent Successfully!";
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+                window.location.href = "success.html";
+            } else {
+                console.error('Error!', response.statusText);
+            }
+        })
+        .catch(error => console.error('Error!', error.message));
+});
