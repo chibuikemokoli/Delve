@@ -75,20 +75,12 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbymGsr-KQqz0qP5XnEV9CHarqpFlahqP5EiWjQHW_QC6PJVsrS4FziASSwysMujc8rD1A/exec';
-const form = document.forms['newsletter'];
-const msg = document.getElementById("msg");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyiJLFUqU4a0CiMguGb0vGxSv6G-wNeIdC2cIDcpk3acbqUTiInjRe6Sxrig7JcovSHxQ/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
 
 form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const userInput = form.email.value;
-
-    if (!isValidEmail(userInput)) {
-        msg.innerHTML = "Invalid email address.";
-        return;
-    }
-
+    e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
             if (response.ok) {
@@ -97,7 +89,7 @@ form.addEventListener('submit', e => {
                     msg.innerHTML = ""
                 }, 5000)
                 form.reset()
-                window.location.href = "success.html";
+                window.location.href = "thank-you.html";
             } else {
                 console.error('Error!', response.statusText);
             }
