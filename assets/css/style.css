@@ -365,14 +365,14 @@ li {
   background-position: right;
 }
 
-.banner-animation {
+/* .banner-animation {
   animation: waveAnim 1s backwards infinite alternate;
 }
 
 @keyframes waveAnim {
   0% { transform: translate(0, 0) rotate(0); }
   100% { transform: translate(2px, 2px) rotate(3deg); }
-}
+} */
 
 .l-header {
   width: 100%;
