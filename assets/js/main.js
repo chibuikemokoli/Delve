@@ -38,6 +38,8 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive)
 
+
+
 function scrollHeader() {
     const header = document.getElementById('header')
     if (this.scrollY >= 100) header.classList.add('scroll-header');
@@ -97,7 +99,7 @@ form.addEventListener('submit', e => {
                     msg.innerHTML = ""
                 }, 5000)
                 form.reset()
-                window.location.href = "success.html";
+                window.location.href = "success";
             } else {
                 console.error('Error!', response.statusText);
             }

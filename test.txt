@@ -1,0 +1,32 @@
+<section class="hero-h" id="home">
+                <div class="hero-container">
+                    <div class="hero-content hnb">
+                        <p class="h2 hero-title hnb hnb">Unique websites for your unique business.</p>
+                        <p class="hero-text">Crafting websites for clients all over the world.</p>
+                        <div class="btn-group hnb">
+                            <a href="accounts/create-account.html" class="bt-n btn-primary">Start a Project</a>
+
+                            <!-- <a href="#fast" class="bt-u btn-secondary">Learn More</a> -->
+                        </div>
+                        <!-- <div class="delivered-meals hnb">
+                            <div class="delivered-img">
+                                <img src="assets/images/anon.jpg" alt="" />
+                                <img src="assets/images/anon.jpg" alt="" />
+                                <img src="assets/images/anon.jpg" alt="" />
+                                <img src="assets/images/anon.jpg" alt="" />
+                                <img src="assets/images/anon.jpg" alt="" />
+                                <img src="assets/images/anon.jpg" alt="" />
+                            </div>
+                            <div class="delivered-description">
+                                <p>
+                                    <span class="delivered-numbers"><strong>21,243</strong> Happy Customers!</span>
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <figure class="hero-banner">
+                        <img src="assets/images/65bb5870295013fa7a4eed37_urban-line-312.svg"  loading="lazy" alt="hero-banner" class="w-100">
+                    </figure>
+                </div>
+            </section>
